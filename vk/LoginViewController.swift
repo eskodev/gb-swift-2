@@ -7,8 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class LoginViewController: UIViewController {
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
