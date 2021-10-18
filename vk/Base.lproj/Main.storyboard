@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="376.81159420289856" y="69.642857142857139"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Friends Table View Controller-->
         <scene sceneID="5Y0-zO-ERf">
             <objects>
-                <tableViewController id="wWW-6g-ygl" sceneMemberID="viewController">
+                <tableViewController id="wWW-6g-ygl" customClass="FriendsTableViewController" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KIu-fq-bvX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="2732" y="-273"/>
         </scene>
-        <!--Table View Controller-->
+        <!--User Groups Table View Controller-->
         <scene sceneID="4ej-GP-DzQ">
             <objects>
-                <tableViewController id="fQA-KM-j6K" sceneMemberID="viewController">
+                <tableViewController id="fQA-KM-j6K" customClass="UserGroupsTableViewController" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Bob-8D-QQO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="2732" y="429"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Available Groups Table View Controller-->
         <scene sceneID="vlO-th-EXY">
             <objects>
-                <tableViewController id="lM8-cN-xML" sceneMemberID="viewController">
+                <tableViewController id="lM8-cN-xML" customClass="AvailableGroupsTableViewController" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="alh-1l-KE5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="3506" y="429"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Friend Collection View Controller-->
         <scene sceneID="iWv-Yh-OWJ">
             <objects>
-                <collectionViewController id="TPv-T2-oPE" sceneMemberID="viewController">
+                <collectionViewController id="TPv-T2-oPE" customClass="FriendCollectionViewController" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4fJ-Pw-hpb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
