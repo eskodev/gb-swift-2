@@ -56,15 +56,23 @@
 		749FD31B2713114000F06EB6 /* vk */ = {
 			isa = PBXGroup;
 			children = (
+				749FD3302716C14500F06EB6 /* Authentication */,
 				749FD31C2713114000F06EB6 /* AppDelegate.swift */,
 				749FD31E2713114000F06EB6 /* SceneDelegate.swift */,
-				749FD3202713114000F06EB6 /* LoginViewController.swift */,
 				749FD3222713114000F06EB6 /* Main.storyboard */,
 				749FD3252713114300F06EB6 /* Assets.xcassets */,
 				749FD3272713114300F06EB6 /* LaunchScreen.storyboard */,
 				749FD32A2713114300F06EB6 /* Info.plist */,
 			);
 			path = vk;
+			sourceTree = "<group>";
+		};
+		749FD3302716C14500F06EB6 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				749FD3202713114000F06EB6 /* LoginViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
