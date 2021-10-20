@@ -8,5 +8,7 @@
 import UIKit
 
 class FriendCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var avatarImageView: UIImageView!
 }

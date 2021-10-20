@@ -8,6 +8,13 @@
 import UIKit
 
 class AvailableGroupsTableViewController: UITableViewController {
+    var availableGroups = [
+        "Group 1",
+        "Group 2",
+        "Group 3",
+        "Group 4",
+        "Group 5"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,24 +29,22 @@ class AvailableGroupsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return availableGroups.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "groupTableViewCell", for: indexPath) as! GroupTableViewCell
 
-        // Configure the cell...
+        let group = availableGroups[indexPath.row]
+        
+        cell.groupNameLabel.text = group
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
