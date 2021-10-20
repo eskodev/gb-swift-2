@@ -45,8 +45,6 @@ class FriendCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "friendCollectionViewCell", for: indexPath) as! FriendCollectionViewCell
     
-        cell.nameLabel.text = "Михаил"
-    
         return cell
     }
 
