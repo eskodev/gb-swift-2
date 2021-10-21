@@ -177,35 +177,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupTableViewCell" id="Isi-Pc-lnL" customClass="GroupTableViewCell" customModule="vk" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupTableViewCell" id="43P-Hd-Olj" customClass="GroupTableViewCell" customModule="vk" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Isi-Pc-lnL" id="PbD-Z2-rq6">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="43P-Hd-Olj" id="J8Z-qa-ZOA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pl-UX-2Jl">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asn-rx-NRW">
                                             <rect key="frame" x="30" y="11.5" width="320" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="INJ-l4-ATj">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHx-cF-GxR">
                                             <rect key="frame" x="360" y="-0.5" width="44" height="44.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="Cl1-4d-MJl"/>
-                                                <constraint firstAttribute="width" secondItem="INJ-l4-ATj" secondAttribute="height" multiplier="1:1" id="Xve-De-oAU"/>
+                                                <constraint firstAttribute="width" secondItem="iHx-cF-GxR" secondAttribute="height" multiplier="1:1" id="c66-GQ-hc1"/>
+                                                <constraint firstAttribute="height" constant="44" id="kvH-Xm-sYW"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="9Pl-UX-2Jl" firstAttribute="centerY" secondItem="PbD-Z2-rq6" secondAttribute="centerY" id="0Hp-Zb-g8b"/>
-                                        <constraint firstAttribute="trailing" secondItem="INJ-l4-ATj" secondAttribute="trailing" constant="10" id="Ha1-kW-owL"/>
-                                        <constraint firstItem="9Pl-UX-2Jl" firstAttribute="leading" secondItem="PbD-Z2-rq6" secondAttribute="leadingMargin" constant="10" id="M67-Cq-BPc"/>
-                                        <constraint firstItem="INJ-l4-ATj" firstAttribute="centerY" secondItem="PbD-Z2-rq6" secondAttribute="centerY" id="ZCf-dJ-20H"/>
-                                        <constraint firstItem="INJ-l4-ATj" firstAttribute="leading" secondItem="9Pl-UX-2Jl" secondAttribute="trailing" constant="10" id="x0Z-9G-PXC"/>
+                                        <constraint firstItem="Asn-rx-NRW" firstAttribute="leading" secondItem="J8Z-qa-ZOA" secondAttribute="leadingMargin" constant="10" id="0D9-eU-h5R"/>
+                                        <constraint firstAttribute="trailing" secondItem="iHx-cF-GxR" secondAttribute="trailing" constant="10" id="3sx-zw-5Pz"/>
+                                        <constraint firstItem="Asn-rx-NRW" firstAttribute="centerY" secondItem="J8Z-qa-ZOA" secondAttribute="centerY" id="PEy-jF-IC0"/>
+                                        <constraint firstItem="iHx-cF-GxR" firstAttribute="centerY" secondItem="J8Z-qa-ZOA" secondAttribute="centerY" id="Uan-AG-1tc"/>
+                                        <constraint firstItem="iHx-cF-GxR" firstAttribute="leading" secondItem="Asn-rx-NRW" secondAttribute="trailing" constant="10" id="u7J-Wy-Dfa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="iHx-cF-GxR" id="YW4-Fe-eTR"/>
+                                    <outlet property="groupNameLabel" destination="Asn-rx-NRW" id="Mfa-7X-aYT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
