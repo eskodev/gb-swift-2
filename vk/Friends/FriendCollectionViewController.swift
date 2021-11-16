@@ -8,6 +8,7 @@
 import UIKit
 
 class FriendCollectionViewController: UICollectionViewController {
+    var friend: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +40,13 @@ class FriendCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "friendCollectionViewCell", for: indexPath) as! FriendCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "friendCollectionViewCell", for: indexPath) as? FriendCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.avatarImageView.image = friend?.image
     
         return cell
     }

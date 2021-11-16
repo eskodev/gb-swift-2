@@ -8,7 +8,7 @@
 import UIKit
 
 class UserGroupsTableViewController: UITableViewController {
-    var userGroups: [String] = []
+    var userGroups: [Group] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +31,12 @@ class UserGroupsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groupTableViewCell", for: indexPath) as! GroupTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupTableViewCell", for: indexPath) as? GroupTableViewCell else { return UITableViewCell() }
         
         let group = userGroups[indexPath.row]
         
-        cell.groupNameLabel.text = group
+        cell.groupNameLabel.text = group.name
+        cell.avatarImageView.image = group.image
         
         return cell
     }
@@ -47,7 +48,7 @@ class UserGroupsTableViewController: UITableViewController {
             if let indexPath = availableGroupsController.tableView.indexPathForSelectedRow {
                 let group = availableGroupsController.availableGroups[indexPath.row]
                 
-                if !userGroups.contains(group) {
+                if !userGroups.contains(where: { $0.name == group.name }) {
                     userGroups.append(group)
                     
                     tableView.reloadData()

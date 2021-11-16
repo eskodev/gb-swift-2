@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -152,7 +152,7 @@
                                 <connections>
                                     <outlet property="avatarImageView" destination="AFw-1d-GeC" id="kBE-GX-HmM"/>
                                     <outlet property="nameLabel" destination="A06-fd-wJE" id="AU1-Ht-rhc"/>
-                                    <segue destination="TPv-T2-oPE" kind="show" id="zca-Rp-7Rp"/>
+                                    <segue destination="TPv-T2-oPE" kind="show" identifier="viewFriend" id="zca-Rp-7Rp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -161,10 +161,17 @@
                             <outlet property="delegate" destination="wWW-6g-ygl" id="TZI-8W-DaP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends" id="9nU-EL-Q0Q"/>
+                    <navigationItem key="navigationItem" title="Friends" id="9nU-EL-Q0Q">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="gKa-MR-Q16">
+                            <connections>
+                                <segue destination="fFe-7A-TGE" kind="unwind" identifier="logout" unwindAction="logoutWithSegue:" id="dLu-fd-4Tc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNz-bD-c1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fFe-7A-TGE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2730.434782608696" y="-259.15178571428572"/>
         </scene>
@@ -219,6 +226,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="My Groups" id="a6i-3p-gCE">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="tt3-FU-eP0">
+                            <connections>
+                                <segue destination="12B-Fa-oGZ" kind="unwind" identifier="logout" unwindAction="logoutWithSegue:" id="XsJ-hP-o8s"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="laQ-3q-6FH">
                             <connections>
                                 <segue destination="lM8-cN-xML" kind="show" id="Fb5-8m-ujO"/>
@@ -228,6 +240,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K17-AA-d7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="12B-Fa-oGZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2730.434782608696" y="428.57142857142856"/>
         </scene>
@@ -292,7 +305,7 @@
         <scene sceneID="iWv-Yh-OWJ">
             <objects>
                 <collectionViewController id="TPv-T2-oPE" customClass="FriendCollectionViewController" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4fJ-Pw-hpb">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="4fJ-Pw-hpb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -303,10 +316,10 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="friendCollectionViewCell" id="aNB-2F-lEc" customClass="FriendCollectionViewCell" customModule="vk" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="friendCollectionViewCell" id="aNB-2F-lEc" customClass="FriendCollectionViewCell" customModule="vk" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y58-6w-IIZ">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="y58-6w-IIZ">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -319,9 +332,8 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="centerX" secondItem="y58-6w-IIZ" secondAttribute="centerX" id="LRN-Ed-zSz"/>
-                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="top" secondItem="y58-6w-IIZ" secondAttribute="top" id="i8z-iO-SP4"/>
-                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="centerY" secondItem="y58-6w-IIZ" secondAttribute="centerY" id="tGM-LO-Ah9"/>
+                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="centerX" secondItem="y58-6w-IIZ" secondAttribute="centerX" id="XX4-Bw-QV5"/>
+                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="centerY" secondItem="y58-6w-IIZ" secondAttribute="centerY" id="iBu-En-a6n"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="150"/>
@@ -365,7 +377,9 @@
         <scene sceneID="3Za-Hn-Qcu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t4r-WS-eBa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Друзья" selectedImage="figure.wave.circle.fill" catalog="system" id="Ksy-ee-hg7"/>
+                    <tabBarItem key="tabBarItem" title="Друзья" image="person" catalog="system" selectedImage="person.fill" id="Ksy-ee-hg7">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D97-eq-bHg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -384,7 +398,9 @@
         <scene sceneID="qoa-D8-6H0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UPO-hm-nnJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Группы" selectedImage="rectangle.3.group.bubble.left.fill" catalog="system" id="Z9P-sr-lAg"/>
+                    <tabBarItem key="tabBarItem" title="Группы" image="person.3" catalog="system" selectedImage="person.3.fill" id="Z9P-sr-lAg">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tl9-Hd-KVO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -401,8 +417,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="figure.wave.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="rectangle.3.group.bubble.left.fill" catalog="system" width="128" height="110"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

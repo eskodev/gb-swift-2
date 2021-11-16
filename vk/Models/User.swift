@@ -5,8 +5,12 @@
 //  Created by Mikhail Rumyantsev on 18.10.2021.
 //
 
-import Foundation
+import UIKit
 
-class User {
+struct User {
     var name: String = ""
+    
+    var avatar: UIImage?
+    
+    var image: UIImage?
 }
