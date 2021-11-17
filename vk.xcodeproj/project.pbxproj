@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7419DFD62745188200BF62F3 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7419DFD52745188200BF62F3 /* LikeButton.swift */; };
 		74487AD3271D29A300FE5420 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74487AD2271D29A300FE5420 /* FriendsTableViewController.swift */; };
 		74487AD5271D29D800FE5420 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74487AD4271D29D800FE5420 /* FriendTableViewCell.swift */; };
 		74487AD8271D2A3600FE5420 /* AvailableGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74487AD7271D2A3600FE5420 /* AvailableGroupsTableViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7419DFD52745188200BF62F3 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		74487AD2271D29A300FE5420 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		74487AD4271D29D800FE5420 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		74487AD7271D2A3600FE5420 /* AvailableGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupsTableViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				74487AE1271D3C3500FE5420 /* FriendCollectionViewController.swift */,
 				74487AE3271D3C4D00FE5420 /* FriendCollectionViewCell.swift */,
 				74C12B0D2743C5B20026AC59 /* AvatarView.swift */,
+				7419DFD52745188200BF62F3 /* LikeButton.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				74487AE9271D453B00FE5420 /* Group.swift in Sources */,
 				74C12B0E2743C5B20026AC59 /* AvatarView.swift in Sources */,
 				74487AD3271D29A300FE5420 /* FriendsTableViewController.swift in Sources */,
+				7419DFD62745188200BF62F3 /* LikeButton.swift in Sources */,
 				74487AE2271D3C3500FE5420 /* FriendCollectionViewController.swift in Sources */,
 				74487ADD271D3B3100FE5420 /* UserGroupsTableViewController.swift in Sources */,
 				74487AD8271D2A3600FE5420 /* AvailableGroupsTableViewController.swift in Sources */,

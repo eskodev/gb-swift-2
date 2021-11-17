@@ -121,36 +121,39 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendTableViewCell" id="umZ-4q-r7M" customClass="FriendTableViewCell" customModule="vk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="50.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umZ-4q-r7M" id="RrT-JJ-Rr3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A06-fd-wJE">
-                                            <rect key="frame" x="30" y="11.5" width="320" height="21"/>
+                                            <rect key="frame" x="30" y="15" width="323.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AFw-1d-GeC">
-                                            <rect key="frame" x="360" y="-0.5" width="44" height="44.5"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrO-BX-UZg" customClass="AvatarImageView" customModule="vk" customModuleProvider="target">
+                                            <rect key="frame" x="363.5" y="5" width="40.5" height="40.5"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="0a7-Yu-6WO"/>
-                                                <constraint firstAttribute="width" secondItem="AFw-1d-GeC" secondAttribute="height" multiplier="1:1" id="mhT-Jd-8Jg"/>
+                                                <constraint firstAttribute="height" constant="40" id="dbX-P2-z7x"/>
+                                                <constraint firstAttribute="width" secondItem="YrO-BX-UZg" secondAttribute="height" multiplier="1:1" id="mnD-az-qVV"/>
                                             </constraints>
-                                        </imageView>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="AFw-1d-GeC" secondAttribute="trailing" constant="10" id="JuV-eg-ulr"/>
+                                        <constraint firstAttribute="trailing" secondItem="YrO-BX-UZg" secondAttribute="trailing" constant="10" id="1Yd-LC-X2C"/>
+                                        <constraint firstItem="YrO-BX-UZg" firstAttribute="centerY" secondItem="RrT-JJ-Rr3" secondAttribute="centerY" id="1uH-Rq-qcV"/>
+                                        <constraint firstAttribute="bottom" secondItem="YrO-BX-UZg" secondAttribute="bottom" constant="5" id="2hQ-C5-aAj"/>
+                                        <constraint firstItem="YrO-BX-UZg" firstAttribute="top" secondItem="RrT-JJ-Rr3" secondAttribute="top" constant="5" id="OxI-eJ-cz2"/>
+                                        <constraint firstItem="YrO-BX-UZg" firstAttribute="leading" secondItem="A06-fd-wJE" secondAttribute="trailing" constant="10" id="SQ1-tg-Ien"/>
                                         <constraint firstItem="A06-fd-wJE" firstAttribute="leading" secondItem="RrT-JJ-Rr3" secondAttribute="leadingMargin" constant="10" id="TKZ-5g-qP9"/>
-                                        <constraint firstItem="AFw-1d-GeC" firstAttribute="centerY" secondItem="RrT-JJ-Rr3" secondAttribute="centerY" id="Vaf-LF-odM"/>
                                         <constraint firstItem="A06-fd-wJE" firstAttribute="centerY" secondItem="RrT-JJ-Rr3" secondAttribute="centerY" id="Zeo-6L-tCY"/>
-                                        <constraint firstItem="AFw-1d-GeC" firstAttribute="leading" secondItem="A06-fd-wJE" secondAttribute="trailing" constant="10" id="xWq-TR-Vwp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="avatarImageView" destination="AFw-1d-GeC" id="kBE-GX-HmM"/>
+                                    <outlet property="avatarImageView" destination="YrO-BX-UZg" id="SM6-q8-cXA"/>
                                     <outlet property="nameLabel" destination="A06-fd-wJE" id="AU1-Ht-rhc"/>
                                     <segue destination="TPv-T2-oPE" kind="show" identifier="viewFriend" id="zca-Rp-7Rp"/>
                                 </connections>
@@ -305,7 +308,7 @@
         <scene sceneID="iWv-Yh-OWJ">
             <objects>
                 <collectionViewController id="TPv-T2-oPE" customClass="FriendCollectionViewController" customModule="vk" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="4fJ-Pw-hpb">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" id="4fJ-Pw-hpb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -316,14 +319,14 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="friendCollectionViewCell" id="aNB-2F-lEc" customClass="FriendCollectionViewCell" customModule="vk" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="friendCollectionViewCell" id="aNB-2F-lEc" customClass="FriendCollectionViewCell" customModule="vk" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="y58-6w-IIZ">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="y58-6w-IIZ">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ajl-va-p9s">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ajl-va-p9s">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="150" id="4Fm-mL-rpp"/>
@@ -332,8 +335,10 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="centerX" secondItem="y58-6w-IIZ" secondAttribute="centerX" id="XX4-Bw-QV5"/>
-                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="centerY" secondItem="y58-6w-IIZ" secondAttribute="centerY" id="iBu-En-a6n"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ajl-va-p9s" secondAttribute="trailing" id="KJ8-62-aWr"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ajl-va-p9s" secondAttribute="bottom" id="Mbj-HI-Rsa"/>
+                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="top" secondItem="y58-6w-IIZ" secondAttribute="top" id="RlO-KL-QkH"/>
+                                        <constraint firstItem="Ajl-va-p9s" firstAttribute="leading" secondItem="y58-6w-IIZ" secondAttribute="leading" id="iLf-2d-sxz"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="150"/>
