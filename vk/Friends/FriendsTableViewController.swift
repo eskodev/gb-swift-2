@@ -8,10 +8,13 @@
 import UIKit
 
 class FriendsTableViewController: UITableViewController {
-    var friends: [String] = [
-        "Игорь",
-        "Павел",
-        "Сергей"
+    var friends = [
+        User(name: "Tom", avatar: UIImage(named: "1"), image: UIImage(named: "1")),
+        User(name: "Alex", avatar: UIImage(named: "2"), image: UIImage(named: "2")),
+        User(name: "Robert", avatar: UIImage(named: "3"), image: UIImage(named: "3")),
+        User(name: "John", avatar: UIImage(named: "4"), image: UIImage(named: "4")),
+        User(name: "Tim", avatar: UIImage(named: "5"), image: UIImage(named: "5")),
+        User(name: "Mark", avatar: UIImage(named: "6"), image: UIImage(named: "6")),
     ]
     
     override func viewDidLoad() {
@@ -35,13 +38,22 @@ class FriendsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "friendTableViewCell", for: indexPath) as! FriendTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendTableViewCell", for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
         
         let friend = friends[indexPath.row]
         
-        cell.nameLabel.text = friend
+        cell.nameLabel.text = friend.name
+        cell.avatarImageView.image = friend.image
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "viewFriend" else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let destination = segue.destination as? FriendCollectionViewController else { return }
+        
+        destination.friend = friends[indexPath.row]
     }
     
     /*

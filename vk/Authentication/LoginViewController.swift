@@ -70,6 +70,13 @@ class LoginViewController: UIViewController {
         return authenticated
     }
     
+    @IBAction func logout(segue: UIStoryboardSegue) {
+        if segue.identifier == "logout" {
+            loginInput.text = ""
+            passwordInput.text = ""
+        }
+    }
+    
     // MARK: - Private
     private func checkAuth() -> Bool {
         guard let login = loginInput.text, let password = passwordInput.text else { return false }
