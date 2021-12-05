@@ -144,7 +144,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="YrO-BX-UZg" secondAttribute="trailing" constant="10" id="1Yd-LC-X2C"/>
-                                        <constraint firstItem="YrO-BX-UZg" firstAttribute="centerY" secondItem="RrT-JJ-Rr3" secondAttribute="centerY" id="1uH-Rq-qcV"/>
                                         <constraint firstAttribute="bottom" secondItem="YrO-BX-UZg" secondAttribute="bottom" constant="5" id="2hQ-C5-aAj"/>
                                         <constraint firstItem="YrO-BX-UZg" firstAttribute="top" secondItem="RrT-JJ-Rr3" secondAttribute="top" constant="5" id="OxI-eJ-cz2"/>
                                         <constraint firstItem="YrO-BX-UZg" firstAttribute="leading" secondItem="A06-fd-wJE" secondAttribute="trailing" constant="10" id="SQ1-tg-Ien"/>
@@ -333,17 +332,28 @@
                                                 <constraint firstAttribute="width" secondItem="Ajl-va-p9s" secondAttribute="height" multiplier="1:1" id="dXL-gu-8Tk"/>
                                             </constraints>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJj-do-MAO" customClass="LikeButton" customModule="vk" customModuleProvider="target">
+                                            <rect key="frame" x="108" y="108" width="32" height="32"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="WJj-do-MAO" secondAttribute="height" multiplier="1:1" id="Lao-yW-Z4X"/>
+                                                <constraint firstAttribute="height" constant="32" id="t9k-ld-nkm"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Ajl-va-p9s" secondAttribute="trailing" id="KJ8-62-aWr"/>
                                         <constraint firstAttribute="bottom" secondItem="Ajl-va-p9s" secondAttribute="bottom" id="Mbj-HI-Rsa"/>
                                         <constraint firstItem="Ajl-va-p9s" firstAttribute="top" secondItem="y58-6w-IIZ" secondAttribute="top" id="RlO-KL-QkH"/>
+                                        <constraint firstAttribute="trailing" secondItem="WJj-do-MAO" secondAttribute="trailing" constant="10" id="dzf-HR-2X3"/>
+                                        <constraint firstAttribute="bottom" secondItem="WJj-do-MAO" secondAttribute="bottom" constant="10" id="fAG-Wt-fTP"/>
                                         <constraint firstItem="Ajl-va-p9s" firstAttribute="leading" secondItem="y58-6w-IIZ" secondAttribute="leading" id="iLf-2d-sxz"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
                                     <outlet property="avatarImageView" destination="Ajl-va-p9s" id="aqC-E1-yDR"/>
+                                    <outlet property="likeButton" destination="WJj-do-MAO" id="ZTR-5v-TwF"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
