@@ -23,7 +23,7 @@
 		749FD3242713114000F06EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749FD3222713114000F06EB6 /* Main.storyboard */; };
 		749FD3262713114300F06EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749FD3252713114300F06EB6 /* Assets.xcassets */; };
 		749FD3292713114300F06EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749FD3272713114300F06EB6 /* LaunchScreen.storyboard */; };
-		74C12B0E2743C5B20026AC59 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C12B0D2743C5B20026AC59 /* AvatarView.swift */; };
+		74C12B0E2743C5B20026AC59 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C12B0D2743C5B20026AC59 /* AvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		749FD3252713114300F06EB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		749FD3282713114300F06EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		749FD32A2713114300F06EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74C12B0D2743C5B20026AC59 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		74C12B0D2743C5B20026AC59 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				74487AD4271D29D800FE5420 /* FriendTableViewCell.swift */,
 				74487AE1271D3C3500FE5420 /* FriendCollectionViewController.swift */,
 				74487AE3271D3C4D00FE5420 /* FriendCollectionViewCell.swift */,
-				74C12B0D2743C5B20026AC59 /* AvatarView.swift */,
+				74C12B0D2743C5B20026AC59 /* AvatarImageView.swift */,
 				7419DFD52745188200BF62F3 /* LikeButton.swift */,
 			);
 			path = Friends;
@@ -207,7 +207,7 @@
 				74487AE4271D3C4D00FE5420 /* FriendCollectionViewCell.swift in Sources */,
 				74487ADA271D2A4D00FE5420 /* GroupTableViewCell.swift in Sources */,
 				74487AE9271D453B00FE5420 /* Group.swift in Sources */,
-				74C12B0E2743C5B20026AC59 /* AvatarView.swift in Sources */,
+				74C12B0E2743C5B20026AC59 /* AvatarImageView.swift in Sources */,
 				74487AD3271D29A300FE5420 /* FriendsTableViewController.swift in Sources */,
 				7419DFD62745188200BF62F3 /* LikeButton.swift in Sources */,
 				74487AE2271D3C3500FE5420 /* FriendCollectionViewController.swift in Sources */,

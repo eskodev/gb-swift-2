@@ -1,5 +1,5 @@
 //
-//  AvatarView.swift
+//  AvatarImageView.swift
 //  vk
 //
 //  Created by Mikhail Rumyantsev on 16.11.2021.

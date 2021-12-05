@@ -57,6 +57,10 @@ import UIKit
     allLikesCount += isLiked ? 1 : -1
     
     let image = isLiked ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+    let color = isLiked ? UIColor.red : UIColor.black
+    
+    iconImageView.tintColor = color
+    countLabel.textColor = color
     
     countLabel.text = String(allLikesCount)
     iconImageView.image = image
